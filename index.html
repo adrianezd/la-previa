@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La Previa — Juego para fiestas con amigos gratis</title>
+<meta name="description" content="Juego de fiesta gratis en el navegador: yo nunca, quién es más probable, verdad o reto y retos con los nombres de tus amigos. Sin descargar nada, con modo sin alcohol.">
+<link rel="canonical" href="https://adrianezd.github.io/la-previa/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#7b2ff7">
+<meta property="og:type" content="website">
+<meta property="og:title" content="La Previa — Juego para fiestas">
+<meta property="og:description" content="Yo nunca, quién es más probable y retos con los nombres de tus amigos. Gratis y sin descargar nada.">
+<meta property="og:url" content="https://adrianezd.github.io/la-previa/">
+<meta property="og:locale" content="es_ES">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="inicio" class="pantalla">
+  <h1>🥳 La Previa</h1>
+  <p class="sub">Añadid vuestros nombres y a jugar</p>
+  <form id="formJugador" class="fila">
+    <input id="nombre" maxlength="16" placeholder="Nombre" autocomplete="off">
+    <button class="boton peq">Añadir</button>
+  </form>
+  <ul id="jugadores" class="chips"></ul>
+  <h2>Modos</h2>
+  <div class="modos" id="modos">
+    <label><input type="checkbox" value="nunca" checked> Yo nunca</label>
+    <label><input type="checkbox" value="probable" checked> Quién es más probable</label>
+    <label><input type="checkbox" value="reto" checked> Retos</label>
+    <label><input type="checkbox" value="verdad" checked> Verdad</label>
+  </div>
+  <label class="interruptor"><input type="checkbox" id="sinAlcohol"> Sin alcohol</label>
+  <button class="boton" id="empezar">Empezar</button>
+  <p class="nota">Bebed con cabeza. Nadie está obligado a hacer ningún reto.</p>
+</div>
+
+<div id="juego" class="pantalla" hidden>
+  <div class="barraSup"><button class="mini" id="salir">Salir</button><span id="contador"></span></div>
+  <div class="carta" id="carta">
+    <div class="tipo" id="tipo"></div>
+    <div class="texto" id="texto"></div>
+  </div>
+  <p class="toca">Toca la carta para seguir</p>
+</div>
+<script src="cartas.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

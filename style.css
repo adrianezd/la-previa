@@ -1,0 +1,30 @@
+[hidden] { display: none !important; }
+:root { --bg: #160b2e; --card: #24124a; --text: #fff; --muted: #c7b8ef; --accent: #ff4f9a; }
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.45 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+.pantalla { max-width: 520px; margin: 0 auto; padding: 24px 16px; min-height: 100%; display: flex; flex-direction: column; gap: 14px; }
+h1 { margin: 0; text-align: center; font-size: 2.4rem; }
+h2 { margin: 8px 0 0; font-size: 1rem; color: var(--muted); }
+.sub { text-align: center; color: var(--muted); margin: 0; }
+.fila { display: flex; gap: 8px; }
+input:not([type]) , #nombre { flex: 1; padding: 12px; border-radius: 12px; border: 0; background: var(--card); color: var(--text); font: inherit; }
+.chips { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.chips li { background: var(--card); padding: 6px 12px; border-radius: 999px; cursor: pointer; }
+.chips li::after { content: ' ✕'; color: var(--muted); }
+.modos { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.modos label, .interruptor { background: var(--card); padding: 10px 12px; border-radius: 12px; display: flex; gap: 8px; align-items: center; cursor: pointer; }
+.boton { border: 0; background: var(--accent); color: #fff; font: inherit; font-weight: 800; padding: 14px; border-radius: 14px; cursor: pointer; font-size: 1.1rem; }
+.boton.peq { padding: 10px 16px; font-size: 1rem; }
+.nota { color: var(--muted); font-size: .85rem; text-align: center; }
+.barraSup { display: flex; justify-content: space-between; align-items: center; color: var(--muted); }
+.mini { background: none; border: 1px solid var(--muted); color: var(--muted); border-radius: 999px; padding: 4px 12px; font: inherit; cursor: pointer; }
+.carta { flex: 1; border-radius: 24px; padding: 28px 22px; display: flex; flex-direction: column; justify-content: center; text-align: center; cursor: pointer; user-select: none; transition: transform .15s; min-height: 60vh; }
+.carta:active { transform: scale(.98); }
+.carta.nunca { background: linear-gradient(160deg, #ff4f9a, #b5179e); }
+.carta.probable { background: linear-gradient(160deg, #4cc9f0, #4361ee); }
+.carta.reto { background: linear-gradient(160deg, #f8961e, #f3722c); }
+.carta.verdad { background: linear-gradient(160deg, #43aa8b, #277c63); }
+.tipo { text-transform: uppercase; letter-spacing: .12em; font-weight: 800; opacity: .85; margin-bottom: 18px; }
+.texto { font-size: 1.7rem; font-weight: 800; line-height: 1.25; }
+.toca { text-align: center; color: var(--muted); margin: 0; font-size: .9rem; }
